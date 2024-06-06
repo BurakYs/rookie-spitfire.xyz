@@ -1,3 +1,7 @@
+<svelte:head>
+    <title>Hizmet Koşulları</title>
+</svelte:head>
+
 <script lang="ts">
     import config from '$config';
 </script>

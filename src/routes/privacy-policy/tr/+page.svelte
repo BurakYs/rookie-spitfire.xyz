@@ -1,3 +1,7 @@
+<svelte:head>
+    <title>Gizlilik Politikası</title>
+</svelte:head>
+
 <script lang="ts">
     import config from '$config';
 </script>

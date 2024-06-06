@@ -1,3 +1,7 @@
+<svelte:head>
+    <title>Privacy Policy</title>
+</svelte:head>
+
 <script lang="ts">
     import config from '$config';
 </script>

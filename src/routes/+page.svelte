@@ -100,6 +100,10 @@
     ];
 </script>
 
+<svelte:head>
+    <title>{config.bot.name}</title>
+</svelte:head>
+
 <div class="background">
     <div class="background-image"></div>
     <div class="background-image-animation"></div>

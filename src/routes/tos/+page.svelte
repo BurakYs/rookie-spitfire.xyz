@@ -1,3 +1,7 @@
+<svelte:head>
+    <title>Terms of Service</title>
+</svelte:head>
+
 <script lang="ts">
     import config from '$config';
 </script>
