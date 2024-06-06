@@ -29,28 +29,28 @@
 
     let features = [
         {
-            id: 1,
+            id: 0,
             title: 'Multi-Language Support',
             description: `Don't know English? Not a problem! ${config.bot.name} supports multiple languages.`,
             image: '/assets/newservers.svg',
             className: 'featuresgeneral'
         },
         {
-            id: 2,
+            id: 1,
             title: 'Locker Images',
             description: 'Generate an image of your outfits, backpacks, pickaxes, gliders, dances within just a few seconds!',
             image: '/assets/newservers.svg',
             className: 'featuresgeneral reversefeature'
         },
         {
-            id: 3,
+            id: 2,
             title: 'Friend Management',
             description: 'Add friends, remove friends, get a list of your friend/incoming/outgoing/blocklist, remove inactive accounts easily with just one command!',
             image: '/assets/newservers.svg',
             className: 'featuresgeneral'
         },
         {
-            id: 4,
+            id: 3,
             title: 'Fake Stats',
             description: 'Equip skins you don\'t own, set your level to any number and fake your crown wins in the Crowning Achievement emote with just one command!',
             image: '/assets/newservers.svg',
