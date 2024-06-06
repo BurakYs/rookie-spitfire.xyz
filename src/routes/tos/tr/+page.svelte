@@ -59,5 +59,6 @@
         edersiniz. Yeni şartları kabul etmiyorsanız, lütfen Hizmeti kullanmayı bırakın.</p>
 
     <h2>Bize Ulaşın</h2>
-    <p>Bu Koşullar veya Hizmet hakkında herhangi bir sorunuz varsa, lütfen {config.legal.contactMail} adresinden bizimle iletişime geçin.</p>
+    <p>Bu Koşullar veya Hizmet hakkında herhangi bir sorunuz varsa, lütfen {config.legal.contactMail} adresinden bizimle
+        iletişime geçin.</p>
 </div>
