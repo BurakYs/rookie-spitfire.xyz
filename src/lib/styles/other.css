@@ -1,0 +1,77 @@
+img {
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+
+.modaliban:hover {
+    cursor: pointer;
+}
+
+.modalbutton:hover,
+.modalindexaddtodiscord:hover {
+    cursor: pointer;
+    opacity: 50%;
+    transition: .1s ease-in;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.zoomIn {
+    -webkit-animation-name: zoomIn;
+    animation-name: zoomIn;
+    -webkit-animation-duration: .2s;
+    animation-duration: .2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@keyframes floatarrow {
+    0% {
+        transform: translatey(0px);
+    }
+
+    25% {
+        transform: translatey(-20px);
+    }
+
+    50% {
+        transform: translatey(0px);
+    }
+
+    75% {
+        transform: translatey(-7.5px);
+    }
+
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+:root {
+    --bg-1: #202225;
+    --bg-2: #18191C;
+    --bg-3: #23272A;
+    --cl-1: #FFFFFF;
+    --cl-2: #E2E2E2;
+    --cl-s: #2D7D46;
+}

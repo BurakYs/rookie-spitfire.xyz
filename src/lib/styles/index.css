@@ -1,33 +1,23 @@
-body,
-html,
-.app {
-    background-color: var(--cl-s) !important;
+html, body, .app {
+    background-color: var(--bg-3) !important;
+    font-family: "Inter", sans-serif;
     color: #FFFFFF;
     height: 100%;
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-    scrollbar-color: rgba(255, 255, 255, .1);
-    scrollbar-width: thin;
 }
 
 * {
     box-sizing: border-box;
 }
 
-.terms {
+.policy {
     width: 80%;
-    margin: 80px auto 0;
-    padding-top: 20px;
-}
-
-.terms h1,
-.terms h2,
-.terms h3,
-.terms p,
-.terms li,
-.terms ul {
-    list-style-type: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8rem;
+    padding-bottom: 2rem;
 }
 
 .highlight {
@@ -146,14 +136,17 @@ html,
     text-decoration: none;
     font-size: 17px;
     font-weight: 500;
-    border-radius: 6.5px;
+    border-radius: 7px;
 }
 
 .landingpage .end .a .dclogo {
     display: flex;
-    width: 30px;
-    height: 30px;
     margin-right: 10px;
+}
+
+.landingpage .end .a .dclogo img {
+    width: 32px;
+    height: 32px;
 }
 
 .landingpage .end .b {
@@ -168,7 +161,7 @@ html,
 }
 
 .landingpage .end .b img {
-    width: 30px;
+    width: 32px;
     margin: 40px 0;
     animation: floatarrow 1.5s ease-in-out infinite;
 }
@@ -304,7 +297,7 @@ html,
     max-width: 90%;
 }
 
-.features .featuresgeneral .allareas .areasleft a {
+.features .featuresgeneral .allareas .areasleft .learnmore {
     margin-top: 20px;
     width: 50%;
     height: 48px;
@@ -316,16 +309,18 @@ html,
     background-color: rgba(255, 255, 255, .1);
     align-items: center;
     justify-content: center;
-    border-radius: 6.5px;
+    border-radius: 7px;
     transition: .1s ease-in;
+    border: 0;
+    outline: none;
 }
 
-.features .featuresgeneral .allareas .areasleft a:hover {
+.features .featuresgeneral .allareas .areasleft .learnmore:hover {
     opacity: 50%;
     transition: .1s ease-in;
 }
 
-.features .featuresgeneral .allareas .areasleft a div {
+.features .featuresgeneral .allareas .areasleft .learnmore span {
     display: flex;
     height: auto;
     width: auto;
@@ -333,7 +328,7 @@ html,
     justify-content: center;
 }
 
-.features .featuresgeneral .allareas .areasleft a div img {
+.features .featuresgeneral .allareas .areasleft .learnmore span img {
     width: 25px;
     height: 25px;
     margin-right: 10px;
@@ -415,7 +410,7 @@ html,
         margin: 0;
     }
 
-    .features .featuresgeneral .allareas .areasleft a {
+    .features .featuresgeneral .allareas .areasleft .learnmore {
         width: 100%;
     }
 
@@ -489,7 +484,7 @@ html,
     color: #FFFFFF;
     font-size: 17px;
     font-weight: 400;
-    border-radius: 6.5px;
+    border-radius: 7px;
     transition: .1s ease-in;
     border: none;
 }
@@ -573,7 +568,7 @@ html,
     background-color: var(--cl-s);
     align-items: center;
     justify-content: center;
-    border-radius: 6.5px;
+    border-radius: 7px;
     transition: .1s ease-in;
 }
 
@@ -747,7 +742,7 @@ html,
 
 .line3 {
     width: 100%;
-    height: 1.5px;
+    height: 2px;
     background-color: #37383A;
     margin-top: 32px;
     margin-bottom: 32px;
@@ -767,7 +762,7 @@ html,
     height: 48px;
     margin-top: 32px;
     background-color: var(--cl-s);
-    border-radius: 6.5px;
+    border-radius: 7px;
     text-decoration: none;
     color: #FFFFFF;
     font-size: 17px;
@@ -858,7 +853,7 @@ html,
 .morefeature .centermorefeature .rightarea .faq {
     margin-top: 20px;
     background-color: var(--bg-2);
-    border-radius: 6.5px;
+    border-radius: 7px;
     overflow: hidden;
 }
 
@@ -912,7 +907,7 @@ html,
     align-items: center;
     justify-content: center;
     background-color: #000000;
-    border-radius: 0 6.5px 6.5px 0;
+    border-radius: 0 7px 7px 0;
     cursor: pointer;
     border: none;
 }
@@ -933,13 +928,13 @@ html,
 
 .morefeature .centermorefeature .rightarea .faq .areastop .areasright button .icon .i1 {
     width: 100%;
-    height: 1.5px;
+    height: 2px;
     background-color: #FFFFFF;
     border-radius: .2px;
 }
 
 .morefeature .centermorefeature .rightarea .faq .areastop .areasright button .icon .i2 {
-    width: 1.5px;
+    width: 2px;
     height: 100%;
     background-color: #FFFFFF;
     position: absolute;
@@ -977,7 +972,7 @@ html,
         align-items: center;
         text-align: center;
         padding: 0
-    };
+    }
 
     .morefeature .centermorefeature .rightarea .faq {
         width: 100%;
