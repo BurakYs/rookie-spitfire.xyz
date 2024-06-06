@@ -1,156 +1,151 @@
 img {
     -webkit-user-drag: none;
-    -khtml-user-drag: none;
-    -moz-user-drag: none;
-    -o-user-drag: none;
     -webkit-user-select: none;
-    -khtml-user-select: none;
     -moz-user-select: none;
-    -o-user-select: none;
-    user-select: none
+    user-select: none;
 }
 
 .modalcontent {
     -ms-overflow-style: none;
-    scrollbar-width: none
+    scrollbar-width: none;
 }
 
 .modalcontent::-webkit-scrollbar {
-    display: none
+    display: none;
 }
 
 .modaliban:hover {
-    cursor: pointer
+    cursor: pointer;
 }
 
 .modalbutton:hover,
 .modalindexaddtodiscord:hover {
     cursor: pointer;
     opacity: 50%;
-    transition: .1s ease-in
+    transition: .1s ease-in;
 }
 
 html {
-    font-family: "Inter", sans-serif
+    font-family: "Inter", sans-serif;
 }
 
 ::-webkit-scrollbar {
-    width: 11px
+    width: 11px;
 }
 
 ::-webkit-scrollbar-thumb {
     background-color: rgba(255, 255, 255, .1);
-    border-radius: 2px
+    border-radius: 2px;
 }
 
 ::-webkit-scrollbar-track {
-    background-color: transparent
+    background-color: transparent;
 }
 
 ::-webkit-scrollbar-track-piece {
-    background-color: #18191c
+    background-color: #18191C;
 }
 
 @keyframes zoomIn {
     0% {
-        transform: scale(0)
+        transform: scale(0);
     }
 
     100% {
-        transform: scale(1)
+        transform: scale(1);
     }
 }
 
 @-webkit-keyframes fadeIn {
     0% {
         opacity: 0;
-        transform: scale(.5)
+        transform: scale(.5);
     }
 
     100% {
         opacity: 1;
-        transform: scale(1)
+        transform: scale(1);
     }
 }
 
 @keyframes fadeIn {
     0% {
-        opacity: 0%
+        opacity: 0;
     }
 
     100% {
-        opacity: 100%
+        opacity: 100%;
     }
 }
 
 @keyframes fadeOut {
     0% {
-        opacity: 0
+        opacity: 0;
     }
 
     10% {
-        opacity: 1
+        opacity: 1;
     }
 
     90% {
         opacity: 1;
-        transform: translateY(0px)
+        transform: translateY(0px);
     }
 
     99% {
         opacity: 0;
-        transform: translateY(-30px)
+        transform: translateY(-30px);
     }
 
     100% {
-        opacity: 0
+        opacity: 0;
     }
 }
 
 @keyframes spinElement {
     0% {
-        transform: scale(0) rotate(1deg)
+        transform: scale(0) rotate(1deg);
     }
 
     50% {
-        transform: scale(1) rotate(180deg)
+        transform: scale(1) rotate(180deg);
     }
 
     90% {
-        transform: scale(0) rotate(360deg)
+        transform: scale(0) rotate(360deg);
     }
 
     100% {
-        transform: scale(0)
+        transform: scale(0);
     }
 }
 
 @keyframes faqOpen {
     0% {
-        transform: rotate(0deg)
+        transform: rotate(0deg);
     }
 
     99% {
-        opacity: 0%;
-        transform: rotate(90deg)
+        opacity: 0;
+        transform: rotate(90deg);
     }
 
     100% {
-        display: none
+        display: none;
     }
 }
 
 .openFaqAnimation {
-    animation: faqOpen .2s linear
+    animation: faqOpen .2s linear;
 }
 
 .spin {
-    animation: spinElement 3s linear infinite
+    animation: spinElement 3s linear infinite;
 }
 
 .fadeout {
     animation-name: fadeOut;
-    -webkit-animation-name: fadeOut
+    -webkit-animation-name: fadeOut;
 }
 
 .zoomIn {
@@ -159,7 +154,7 @@ html {
     -webkit-animation-duration: .2s;
     animation-duration: .2s;
     -webkit-animation-fill-mode: both;
-    animation-fill-mode: both
+    animation-fill-mode: both;
 }
 
 .fadein {
@@ -168,14 +163,14 @@ html {
     -webkit-animation-duration: 50ms;
     animation-duration: 50ms;
     -webkit-animation-fill-mode: both;
-    animation-fill-mode: both
+    animation-fill-mode: both;
 }
 
 .animation {
     -webkit-animation-duration: .5s;
     animation-duration: .5s;
     -webkit-animation-fill-mode: both;
-    animation-fill-mode: both
+    animation-fill-mode: both;
 }
 
 .pageloader {
@@ -187,7 +182,7 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 2
+    z-index: 2;
 }
 
 .pageloadercenter {
@@ -197,11 +192,11 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: relative
+    position: relative;
 }
 
 .loader {
-    border: 4px solid #fff;
+    border: 4px solid #FFFFFF;
     border-top: 4px solid rgba(255, 255, 255, .1);
     border-radius: 50%;
     width: 80px;
@@ -209,7 +204,7 @@ html {
     animation: spin 1s linear infinite;
     display: flex;
     align-items: center;
-    justify-content: center
+    justify-content: center;
 }
 
 .loaderlogo {
@@ -218,13 +213,13 @@ html {
     height: 80px;
     display: flex;
     align-items: center;
-    justify-content: center
+    justify-content: center;
 }
 
 .loaderlogo img {
     width: 30%;
     position: relative;
-    display: none
+    display: none;
 }
 
 .loadingtext {
@@ -234,88 +229,88 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column
+    flex-direction: column;
 }
 
 .loadingtext h1 {
-    color: #fff;
+    color: #FFFFFF;
     font-weight: 900;
     font-size: 35px;
     margin-bottom: 10px;
     margin-top: 10px;
-    text-align: center
+    text-align: center;
 }
 
 .loadingtext p {
-    color: #e2e2e2;
+    color: #E2E2E2;
     font-weight: 500;
     font-size: 14px;
     margin: 0;
-    text-align: center
+    text-align: center;
 }
 
 @keyframes float {
     0% {
-        transform: translatey(0px)
+        transform: translatey(0px);
     }
 
     50% {
-        transform: translatey(-10px)
+        transform: translatey(-10px);
     }
 
     100% {
-        transform: translatey(0px)
+        transform: translatey(0px);
     }
 }
 
 @keyframes spin {
     0% {
-        transform: rotate(0deg)
+        transform: rotate(0deg);
     }
 
     100% {
-        transform: rotate(360deg)
+        transform: rotate(360deg);
     }
 }
 
 @keyframes floatarrow {
     0% {
-        transform: translatey(0px)
+        transform: translatey(0px);
     }
 
     25% {
-        transform: translatey(-20px)
+        transform: translatey(-20px);
     }
 
     50% {
-        transform: translatey(0px)
+        transform: translatey(0px);
     }
 
     75% {
-        transform: translatey(-7.5px)
+        transform: translatey(-7.5px);
     }
 
     100% {
-        transform: translatey(0px)
+        transform: translatey(0px);
     }
 }
 
 @keyframes runProgress {
     0% {
         width: 0;
-        background: rgba(255, 255, 255, .3)
+        background: rgba(255, 255, 255, .3);
     }
 
     100% {
         width: 96%;
-        background: rgba(255, 255, 255, 1)
+        background: rgba(255, 255, 255, 1);
     }
 }
 
 :root {
     --bg-1: #202225;
-    --bg-2: #18191c;
-    --cl-1: #fff;
-    --cl-2: #e2e2e2;
-    --cl-s: #2d7d46;
+    --bg-2: #18191C;
+    --cl-1: #FFFFFF;
+    --cl-2: #E2E2E2;
+    --cl-s: #2D7D46;
 }

@@ -38,14 +38,12 @@
     height: auto;
 }
 
-.line_1,
-.line_2,
-.line_3 {
+.line_1, .line_2, .line_3 {
     width: 25px;
     margin-top: 3px;
     margin-bottom: 3px;
     height: 4px;
-    background-color: #ffffff;
+    background-color: #FFFFFF;
     border-radius: 0.8px;
 }
 
@@ -96,7 +94,7 @@
     margin-left: 7px;
     border-radius: 50%;
     width: 48px;
-    height: 48px
+    height: 48px;
 }
 
 .navbar .rightarea {
@@ -111,13 +109,13 @@
     font-weight: 700;
     font-size: 17px;
     height: 85%;
-    color: #ffffff;
+    color: #FFFFFF;
     padding-left: 35px;
     padding-right: 35px;
     border-radius: 6.5px;
     background-color: var(--cl-s);
     margin-right: 30px;
-    border: 0px;
+    border: 0;
 }
 
 .navbar .rightarea .invitebutton {
@@ -126,12 +124,12 @@
     padding-right: 35px;
     border-radius: 50px;
     background-color: var(--cl-s);
-    border: 0px;
+    border: 0;
     margin-right: 10px;
     font-family: "Inter", sans-serif;
     font-weight: 700;
     font-size: 17px;
-    color: #ffffff;
+    color: #FFFFFF;
 }
 
 .responsivenavbar .rightarea .invitebutton:hover,
@@ -153,7 +151,7 @@
     font-family: "Inter", sans-serif;
     font-size: 17px;
     font-weight: 700;
-    color: #ffffff;
+    color: #FFFFFF;
     margin-right: 2.5%;
     margin-left: 2.5%;
     text-decoration: none;
@@ -162,7 +160,6 @@
 .navbar .middlearea a:hover {
     text-decoration: underline;
 }
-
 
 .responsivemenu {
     width: 100%;
@@ -190,7 +187,6 @@
     display: flex;
     flex-direction: column;
 }
-
 
 .responsivemenu .menuback .indexmenu .headlogo {
     display: flex;
@@ -274,7 +270,7 @@
 .responsivemenu .menuback .indexmenu .ln .menuline {
     width: calc(100% - 80px);
     height: 1px;
-    background-color: rgba(255, 255, 255, .1)
+    background-color: rgba(255, 255, 255, .1);
 }
 
 .responsivemenu .menuback .indexmenu .menuitems {
@@ -289,7 +285,7 @@
     font-family: "Inter", sans-serif;
     font-size: 17px;
     font-weight: 500;
-    color: #ffffff;
+    color: #FFFFFF;
 }
 
 .responsivemenu .menuback .indexmenu .menuitems a:hover {
@@ -303,7 +299,7 @@
     align-items: center;
     margin: 0 40px;
     position: relative;
-    top: 0px;
+    top: 0;
 }
 
 .responsivemenu .menuback .indexmenu .bottommenu button {
@@ -316,7 +312,7 @@
     font-family: "Inter", sans-serif;
     font-weight: 700;
     font-size: 17px;
-    color: #ffffff;
+    color: #FFFFFF;
     transition: 100ms ease-in;
     margin-top: 18px;
 }
@@ -326,7 +322,6 @@
     opacity: 50%;
 }
 
-/*responsive*/
 @media screen and (max-width: 1150px) {
     .navbar .leftarea a {
         display: none;
@@ -334,7 +329,7 @@
 
     .navbar {
         width: 75%;
-        margin-right: 0px;
+        margin-right: 0;
     }
 
     .responsivenavbar .leftarea a {
