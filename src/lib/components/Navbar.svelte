@@ -4,15 +4,15 @@
     const navItems = [
         {
             name: 'Support Server',
-            link: config.bot.supportServer
+          href: config.bot.supportServer
         },
         {
             name: 'Commands',
-            link: '#commands'
+          href: '?'
         },
         {
             name: 'FAQ',
-            link: '#faq'
+          href: '#faq'
         }
     ];
 </script>
@@ -40,7 +40,7 @@
     </div>
     <div class="middlearea">
         {#each navItems as item}
-            <a href={item.link}>{item.name}</a>
+            <a href={item.href}>{item.name}</a>
         {/each}
     </div>
     <div class="rightarea">
@@ -70,7 +70,7 @@
             </div>
             <div class="menuitems">
                 {#each navItems as item}
-                    <a href={item.link}>{item.name}</a>
+                    <a href={item.href}>{item.name}</a>
                 {/each}
             </div>
             <div class="bottommenu">
