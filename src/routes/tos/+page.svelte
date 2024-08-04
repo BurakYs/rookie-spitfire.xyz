@@ -4,7 +4,14 @@
 
 <script lang="ts">
     import config from '$config';
+    import '$lib/styles/legal.css'
 </script>
+
+<style>
+    :global(.app, body) {
+        background-color: var(--bg-1) !important;
+    }
+</style>
 
 <div class="policy">
     <h1>Terms of Service</h1>
@@ -63,5 +70,6 @@
         bound by the updated terms. If you do not agree to the new terms, please stop using the Service.</p>
 
     <h2>Contact Us</h2>
-    <p>If you have any questions about these Terms or the Service, please contact us at {config.legal.contactMail}.</p>
+    <p>If you have any questions about these Terms or the Service, please contact us at
+        <a href="mailto:{config.legal.contactMail}">{config.legal.contactMail}</a>.</p>
 </div>

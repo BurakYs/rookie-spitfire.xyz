@@ -1,4 +1,4 @@
-html, body, .app {
+body, .app {
     background-color: var(--bg-3) !important;
     font-family: "Inter", sans-serif;
     color: #FFFFFF;
@@ -10,14 +10,6 @@ html, body, .app {
 
 * {
     box-sizing: border-box;
-}
-
-.policy {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 8rem;
-    padding-bottom: 2rem;
 }
 
 .highlight {

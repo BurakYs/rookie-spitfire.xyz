@@ -4,7 +4,14 @@
 
 <script lang="ts">
     import config from '$config';
+    import '$lib/styles/legal.css'
 </script>
+
+<style>
+    :global(.app, body) {
+        background-color: var(--bg-1) !important;
+    }
+</style>
 
 <div class="policy">
     <h1>Privacy Policy</h1>
@@ -81,5 +88,5 @@
 
     <h2>Contact Us</h2>
     <p>If you have any questions or concerns about this Privacy Policy or the data we collect, please contact us
-        at {config.legal.contactMail}</p>
+        at <a href="mailto:{config.legal.contactMail}">{config.legal.contactMail}</a>.</p>
 </div>
