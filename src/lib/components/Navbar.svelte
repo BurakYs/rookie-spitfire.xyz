@@ -4,15 +4,15 @@
     const navItems = [
         {
             name: 'Support Server',
-          href: config.bot.supportServer
+            href: config.bot.supportServer
         },
         {
             name: 'Commands',
-          href: '?'
+            href: '?'
         },
         {
             name: 'FAQ',
-          href: '#faq'
+            href: '/#faq'
         }
     ];
 </script>
