@@ -1,4 +1,4 @@
-body, .app {
+html, body, .app {
     background-color: var(--bg-3) !important;
     font-family: "Inter", sans-serif;
     color: #FFFFFF;

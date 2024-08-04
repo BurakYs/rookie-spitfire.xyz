@@ -8,7 +8,7 @@
 </script>
 
 <style>
-    :global(.app, body) {
+    :global(html, body, .app) {
         background-color: var(--bg-1) !important;
     }
 </style>
