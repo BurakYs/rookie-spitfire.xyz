@@ -17,7 +17,7 @@
   import '$lib/styles/other.css';
 
   import { onMount } from 'svelte';
-  import config from '$config';
+  import config from '$lib/config';
   import Navbar from '$lib/components/Navbar.svelte';
   import { page } from '$app/stores';
 

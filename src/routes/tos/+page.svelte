@@ -3,7 +3,7 @@
 </svelte:head>
 
 <script lang="ts">
-    import config from '$config';
+    import config from '$lib/config';
     import '$lib/styles/legal.css'
 </script>
 

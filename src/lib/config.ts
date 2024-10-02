@@ -8,6 +8,6 @@ export default {
         supportServer: 'https://api.rookie-spitfire.xyz/support'
     },
     legal: {
-        contactMail: 'burakyhs@duck.com'
+        contactMail: 'contact@buraky.dev'
     }
 };

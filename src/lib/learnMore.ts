@@ -1,5 +1,5 @@
 import LearnMore from '$lib/components/LearnMore.svelte';
-import config from '$config';
+import config from '$lib/config';
 
 const infoList = [
     {
