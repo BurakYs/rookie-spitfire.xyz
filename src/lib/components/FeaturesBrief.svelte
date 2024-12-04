@@ -22,8 +22,7 @@
     }
   ];
 
-  export let start: number;
-  export let end: number;
+  const { start, end }: { start: number, end: number } = $props();
 </script>
 
 {#each featuresBrief.slice(start, end) as feature, index}

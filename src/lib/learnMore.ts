@@ -1,5 +1,6 @@
 import LearnMore from '$lib/components/LearnMore.svelte';
 import config from '$lib/config';
+import { mount } from 'svelte';
 
 const infoList = [
     {
@@ -23,7 +24,7 @@ const infoList = [
 export default function learnMore(num: number) {
     const info = infoList[num];
 
-    new LearnMore({
+    mount(LearnMore, {
         target: document.body,
         props: {
             title: info.title,

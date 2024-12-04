@@ -1,27 +1,27 @@
 <script lang="ts">
-  import config from '$lib/config';
-  import supportModal from '$lib/supportModal';
-  import FeaturesBrief from '$lib/components/FeaturesBrief.svelte';
-  import FAQList from '$lib/components/FAQList.svelte';
-  import FeaturesList from '$lib/components/FeaturesList.svelte';
+    import config from '$lib/config';
+    import supportModal from '$lib/supportModal';
+    import FeaturesBrief from '$lib/components/FeaturesBrief.svelte';
+    import FAQList from '$lib/components/FAQList.svelte';
+    import FeaturesList from '$lib/components/FeaturesList.svelte';
 
-  let stats = [
-    {
-      title: 'Servers',
-      value: '2.8K+',
-      className: 'startarea sta1'
-    },
-    {
-      title: 'Members',
-      value: '200K+',
-      className: 'middle sta1'
-    },
-    {
-      title: 'Registered Accounts',
-      value: '7K+',
-      className: 'endarea sta1'
-    }
-  ];
+    let stats = [
+        {
+            title: 'Servers',
+            value: '2.8K+',
+            className: 'startarea sta1'
+        },
+        {
+            title: 'Members',
+            value: '200K+',
+            className: 'middle sta1'
+        },
+        {
+            title: 'Registered Accounts',
+            value: '7000+',
+            className: 'endarea sta1'
+        }
+    ];
 </script>
 
 <svelte:head>
@@ -39,10 +39,7 @@
                     <h1><span class="highlight">{config.bot.name}</span></h1>
                 </div>
                 <div class="content">
-                    <p>
-                        Daily item shops, friend management, lockers, shop images, reminders, cheap v-bucks and
-                        more!
-                    </p>
+                    <p>{config.bot.description}</p>
                 </div>
                 <div class="end">
                     <a class="a" href={config.bot.invite}>
@@ -59,6 +56,7 @@
         </div>
     </div>
 </div>
+
 <div class="featurescenter">
     <div class="bodyhead">
         <div class="headline" id="headline"></div>
@@ -89,10 +87,10 @@
     <div class="support">
         <div class="supportgeneral">
             <div class="supportleft">
-                <p>A supporter of {config.bot.name}. Donate us or add our bot to your server to support us.</p>
+                <p>Donate or add our bot to your server to support us.</p>
             </div>
             <div class="supportright">
-                <button class="inspect" on:click={supportModal}>Support</button>
+                <button class="inspect" onclick={supportModal}>Support</button>
             </div>
         </div>
     </div>
@@ -103,14 +101,16 @@
         <div class="centermorefeature">
             <div class="leftarea">
                 <h1>More Features?</h1>
-                <p>
-                    We are working on new features every day. You can see the features we are working on and the
-                    features we have completed by clicking the button below.
-                </p>
+                <p>{config.bot.name} has a lot of features that you can use.</p>
+                <p>If you want to see more features, you can join our support server and suggest features.</p>
+
                 <a class="seeall" href={config.bot.supportServer}>Join our Support Server</a>
+
                 <div class="line3"></div>
+
                 <h1>Statistics</h1>
                 <p>{config.bot.name} is a bot verified by discord, trusted by users, used by a lot of servers!</p>
+
                 <div class="stats">
                     {#each stats as stat}
                         <div class={stat.className}>
@@ -120,12 +120,14 @@
                         </div>
                     {/each}
                 </div>
+
                 <a class="addto" href={config.bot.invite}>
                     <div class="index">
                         <img alt="icon" src="/assets/addtodiscordicon.svg"/>
                         Start Using
                     </div>
                 </a>
+
                 <div class="line3 activated"></div>
             </div>
             <div class="rightarea">

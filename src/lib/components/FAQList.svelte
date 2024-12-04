@@ -10,7 +10,7 @@
     {
       id: 'faq2',
       question: 'How can I trust you not to steal my account?',
-      answer: '5000+ users trust us, you can see the proof of this by joining our support server.'
+      answer: 'Thousands of users trust us with their accounts every day. You can join our support server and see if we are trustworthy.'
     },
     {
       id: 'faq3',
@@ -19,8 +19,8 @@
     },
     {
       id: 'faq4',
-      question: 'Why the site theme is incompatible?',
-      answer: 'I copied the website from my other bot'
+      question: 'Why isn\'t the site theme compatible?',
+      answer: 'I copied the website from my old bot'
     }
   ];
 </script>
@@ -32,11 +32,11 @@
                 <p>{faq.question}</p>
             </div>
             <div class="areasright">
-                <button on:click={() => openFaq(faq.id)}>
-                                    <span class="icon">
-                                        <span class="i1"></span>
-                                        <span class="i2"></span>
-                                    </span>
+                <button onclick={() => openFaq(faq.id)} aria-label="Open">
+                  <span class="icon">
+                    <span class="i1"></span>
+                    <span class="i2"></span>
+                  </span>
                 </button>
             </div>
         </div>

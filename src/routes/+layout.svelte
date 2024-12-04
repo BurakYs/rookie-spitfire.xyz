@@ -12,61 +12,64 @@
 </svelte:head>
 
 <script lang="ts">
-  import '$lib/styles/index.css';
-  import '$lib/styles/navbar.css';
-  import '$lib/styles/other.css';
+    import '$lib/styles/index.css';
+    import '$lib/styles/navbar.css';
+    import '$lib/styles/other.css';
 
-  import { onMount } from 'svelte';
-  import config from '$lib/config';
-  import Navbar from '$lib/components/Navbar.svelte';
-  import { page } from '$app/stores';
+    import { onMount } from 'svelte';
+    import config from '$lib/config';
+    import Navbar from '$lib/components/Navbar.svelte';
+    import { page } from '$app/stores';
 
-  const selectQuery = (query: string) => document.querySelector(query)! as HTMLElement;
+    const selectQuery = (query: string) => document.querySelector(query)! as HTMLElement;
 
-  function openMenu() {
-    if (selectQuery('.burgericon').id === 'menuopened') {
-      selectQuery('.responsivemenu').style.display = 'none';
-      selectQuery('.burgericon').id = 'menuclosed';
-      selectQuery('body, html').style.overflow = 'auto';
-    } else {
-      selectQuery('body, html').style.overflow = 'hidden';
-      selectQuery('.responsivemenu').style.display = 'flex';
-      selectQuery('.burgericon').id = 'menuopened';
+    function openMenu() {
+        if (selectQuery('.burgericon').id === 'menuopened') {
+            selectQuery('.responsivemenu').style.display = 'none';
+            selectQuery('.burgericon').id = 'menuclosed';
+            selectQuery('body, html').style.overflow = 'auto';
+        } else {
+            selectQuery('body, html').style.overflow = 'hidden';
+            selectQuery('.responsivemenu').style.display = 'flex';
+            selectQuery('.burgericon').id = 'menuopened';
+        }
     }
-  }
 
-  onMount(() => {
-    selectQuery('.burgericon')?.addEventListener('click', openMenu);
-    selectQuery('.closemenu')?.addEventListener('click', openMenu);
+    onMount(() => {
+        selectQuery('.burgericon')?.addEventListener('click', openMenu);
+        selectQuery('.closemenu')?.addEventListener('click', openMenu);
 
-    window.onclick = function (e) {
-      let modalArea = selectQuery('.modalarea');
-      let modalButton = selectQuery('.modalbutton');
-      let modalIban = selectQuery('.modaliban');
-      let modalIbanIndex = selectQuery('.modalibanindex');
-      let ibanFlex = selectQuery('.ibanflex');
+        window.onclick = function (e) {
+            const modalArea = selectQuery('.modalarea');
+            const modalButton = selectQuery('.modalbutton');
+            const modalIban = selectQuery('.modaliban');
+            const modalIbanIndex = selectQuery('.modalibanindex');
+            const ibanFlex = selectQuery('.ibanflex');
 
-      if (e.target === selectQuery('.menuback')) {
-        selectQuery('.responsivemenu').style.display = 'none';
-        selectQuery('.burgericon').id = 'menuclosed';
-        selectQuery('body, html').style.overflow = 'auto';
-      }
+            if (e.target === selectQuery('.menuback')) {
+                selectQuery('.responsivemenu').style.display = 'none';
+                selectQuery('.burgericon').id = 'menuclosed';
+                selectQuery('body, html').style.overflow = 'auto';
+            }
 
-      if (e.target === modalArea || e.target === modalButton) {
-        selectQuery('.inspectmodal').remove();
-        Object.assign(document.body.style, { style: {} });
-      }
+            if (e.target === modalArea || e.target === modalButton) {
+                selectQuery('.inspectmodal').remove();
+                Object.assign(document.body.style, { style: {} });
+            }
 
-      if ([modalIban, modalIbanIndex, ibanFlex].includes(e.target as HTMLElement)) {
-        navigator.clipboard.writeText(modalIbanIndex.innerHTML);
-        selectQuery('.clipboardtext').style.color = '#41CE6D';
-        selectQuery('.clipboardtext').innerHTML = 'Copied! Thank you for your support!';
-      }
-    };
-  });
+            if ([modalIban, modalIbanIndex, ibanFlex].includes(e.target as HTMLElement)) {
+                navigator.clipboard.writeText(modalIbanIndex.innerHTML);
+                selectQuery('.clipboardtext').style.color = '#41CE6D';
+                selectQuery('.clipboardtext').innerHTML = 'Copied! Thank you for your support!';
+            }
+        };
+    });
+
+    const { children } = $props();
 </script>
 
 <div class="navbarcontainer">
     <Navbar/>
 </div>
-<slot/>
+
+{@render children()}

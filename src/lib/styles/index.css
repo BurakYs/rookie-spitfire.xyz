@@ -740,14 +740,6 @@ html, body, .app {
     margin-bottom: 32px;
 }
 
-.morefeature .centermorefeature .leftarea p {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: #E2E2E2;
-    font-size: 17px;
-    font-weight: 400;
-}
-
 .morefeature .centermorefeature .leftarea .addto,
 .morefeature .centermorefeature .leftarea .seeall {
     width: 100%;
@@ -820,7 +812,7 @@ html, body, .app {
 }
 
 .morefeature .centermorefeature .leftarea p {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 500;
     color: #AFAFAF;
     margin: 0;

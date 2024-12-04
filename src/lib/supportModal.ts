@@ -1,7 +1,8 @@
 import SupportModal from '$lib/components/SupportModal.svelte';
+import { mount } from 'svelte';
 
 export default function supportModal() {
-    new SupportModal({
+    mount(SupportModal, {
         target: document.body
     });
 }

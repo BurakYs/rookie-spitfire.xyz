@@ -6,7 +6,7 @@
     {
       id: 0,
       title: 'Multi-Language Support',
-      description: `Don't know English? Not a problem! ${config.bot.name} supports multiple languages.`,
+      description: `Don't know English? No problem! ${config.bot.name} supports multiple languages.`,
       image: '/assets/newservers.svg',
       className: 'featuresgeneral'
     },
@@ -40,7 +40,7 @@
                         <h3>Features</h3>
                         <h1>{feature.title}</h1>
                         <p>{feature.description}</p>
-                        <button on:click={() => learnMore(feature.id)} class="learnmore">
+                        <button onclick={() => learnMore(feature.id)} class="learnmore">
                             <span>
                                 <img src="/assets/infoicon.svg" alt="icon"/>
                                 Learn More

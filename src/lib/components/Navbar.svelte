@@ -44,7 +44,7 @@
         {/each}
     </div>
     <div class="rightarea">
-        <button class="invitebutton" on:click={() => window.location.href = config.bot.invite}>
+        <button class="invitebutton" onclick={() => window.location.href = config.bot.invite}>
             Invite
         </button>
     </div>
@@ -74,7 +74,7 @@
                 {/each}
             </div>
             <div class="bottommenu">
-                <button class="invitebutton" on:click={() => window.location.href = config.bot.invite}>
+                <button class="invitebutton" onclick={() => window.location.href = config.bot.invite}>
                     Invite
                 </button>
             </div>
