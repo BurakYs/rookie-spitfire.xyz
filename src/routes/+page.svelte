@@ -8,17 +8,17 @@
   let stats = [
     {
       title: 'Servers',
-      value: '2.5K+',
+      value: '2.8K+',
       className: 'startarea sta1'
     },
     {
-      title: 'Users',
-      value: '100K+',
+      title: 'Members',
+      value: '200K+',
       className: 'middle sta1'
     },
     {
       title: 'Registered Accounts',
-      value: '5K+',
+      value: '7K+',
       className: 'endarea sta1'
     }
   ];
