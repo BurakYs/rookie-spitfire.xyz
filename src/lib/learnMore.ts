@@ -5,19 +5,19 @@ import { mount } from 'svelte';
 const infoList = [
     {
         title: 'Multi-Language Support',
-        description: `${config.bot.name} supports multiple languages with a wide range of English, German, Turkish, Dutch, French and Spanish! You or the community can add their own language or contribute to the existing languages. These people will also receive the Translator role in the support server. If you want to be a translator, join our support server for more information.`
+        description: `${config.bot.name} supports multiple languages with a wide range of English, German, Turkish, Dutch, French and Spanish.<br><br>By default, the bot will use the language of your Discord client.<br>You can also change the language with the <code>/preferences language</code> command.`
     },
     {
         title: 'Locker Images',
-        description: 'You can view your Fortnite locker either on the Fortnite.GG website or as an image. These are very simple to do. All you need to do is use the "/locker" command to select whether you want to view your locker on Fortnite.GG or as an image. When you select Fortnite.GG as an option, the bot will create your entire locker in seconds and upload it to the Fortnite.GG website, then send you a link to the website. If you want to create it as an image, the bot will ask you which type of cosmetics you want to create for your locker. Once you answer this, the bot will create an image of your locker in seconds and send it to you.'
+        description: 'You can get an image of your locker with the <code>/locker image</code> command. This also lets you choose special categories. Use the command for more info.<br><br>If you want to view your whole locker on <a href="https://fortnite.gg" target="_blank">Fortnite.GG</a>, use the <code>/locker fortnitegg</code> command.'
     },
     {
         title: 'Friend Management',
-        description: `${config.bot.name} is the best way to manage your friends. You can add, remove, block and list your friends with just one command. You can simply do all of these with buttons with the "/friends user" command or if you want to add/remove/block friends you can simply select the subcommand you'd like to use.`
+        description: `${config.bot.name} lets you manage your friends with the <code>/friends</code> command. You can add, remove, and list your friends.<br><br>If you want to manage your friends with an interactive interface, use the <code>/friends user</code> command.`
     },
     {
-        title: 'Fake Stats',
-        description: 'You can fake your stats with these three commands: /ghost-equip, /fake-level, /fake-crown-wins. You can equip skins, dances, backblings, pickaxes you don\'t own with /ghost-equip.'
+        title: 'Fake Your Stats',
+        description: 'You can do fake stuff <strong>only visible to other players in the current Fortnite party</strong> with the bot:<br>• Equip any cosmetic you don\'t own with <code>/ghost equip</code><br>• Change your level with <code>/fake-level</code><br>• Change your crown wins with <code>/fake-crown-wins</code><br>• Change your rank with <code>/fake-rank</code>'
     }
 ];
 

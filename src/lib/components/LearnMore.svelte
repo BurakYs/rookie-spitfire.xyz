@@ -72,6 +72,10 @@
         margin-bottom: 10px;
     }
 
+    :global(.inspectmodal .modalcontent p a) {
+        color: #E2E2E2;
+    }
+
     .inspectmodal .modalsubmit {
         width: 100%;
         height: 80px;
@@ -107,7 +111,7 @@
             <div class="modalbanner"></div>
             <div class="modalcontent">
                 <h3>{title}</h3>
-                <p>{description}</p>
+                <p>{@html description}</p>
             </div>
             <div class="modalsubmit">
                 <button class="modalbutton">
