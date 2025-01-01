@@ -27,7 +27,7 @@
 </script>
 
 {#each faqs as faq, i}
-    <div class="faq {faq.id}" id="faqClosed">
+    <div class="faq faq-{i}" id="faqClosed">
         <div class="areastop">
             <div class="areasleft">
                 <p>{faq.question}</p>
