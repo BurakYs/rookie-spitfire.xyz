@@ -1,75 +1,65 @@
-<svelte:head>
-    <title>{config.bot.name}</title>
-    <meta name="og:title" content={config.bot.name}>
-    <meta name="og:description" content={config.bot.description}>
-    <meta name="og:image" content="/assets/botavatar.png">
-    <meta name="og:url" content={$page.url.href}>
-    <meta name="twitter:description" content={config.bot.description}>
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="theme-color" content={config.bot.color}>
-    <link rel="icon" type="image/png" href="/assets/botavatar.png">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</svelte:head>
-
 <script lang="ts">
-    import '$lib/styles/index.css';
-    import '$lib/styles/navbar.css';
-    import '$lib/styles/other.css';
+  import Navbar from '$components/Navbar.svelte';
+  import Footer from '$components/Footer.svelte';
 
-    import { onMount } from 'svelte';
-    import config from '$lib/config';
-    import Navbar from '$lib/components/Navbar.svelte';
-    import { page } from '$app/stores';
+  import config from '$lib/config';
+  import type { Snippet } from 'svelte';
 
-    const selectQuery = (query: string) => document.querySelector(query)! as HTMLElement;
-
-    function openMenu() {
-        if (selectQuery('.burgericon').id === 'menuopened') {
-            selectQuery('.responsivemenu').style.display = 'none';
-            selectQuery('.burgericon').id = 'menuclosed';
-            selectQuery('body, html').style.overflow = 'auto';
-        } else {
-            selectQuery('body, html').style.overflow = 'hidden';
-            selectQuery('.responsivemenu').style.display = 'flex';
-            selectQuery('.burgericon').id = 'menuopened';
-        }
-    }
-
-    onMount(() => {
-        selectQuery('.burgericon')?.addEventListener('click', openMenu);
-        selectQuery('.closemenu')?.addEventListener('click', openMenu);
-
-        window.onclick = function (e) {
-            const modalArea = selectQuery('.modalarea');
-            const modalButton = selectQuery('.modalbutton');
-            const modalIban = selectQuery('.modaliban');
-            const modalIbanIndex = selectQuery('.modalibanindex');
-            const ibanFlex = selectQuery('.ibanflex');
-
-            if (e.target === selectQuery('.menuback')) {
-                selectQuery('.responsivemenu').style.display = 'none';
-                selectQuery('.burgericon').id = 'menuclosed';
-                selectQuery('body, html').style.overflow = 'auto';
-            }
-
-            if (e.target === modalArea || e.target === modalButton) {
-                selectQuery('.inspectmodal').remove();
-                Object.assign(document.body.style, { style: {} });
-            }
-
-            if ([modalIban, modalIbanIndex, ibanFlex].includes(e.target as HTMLElement)) {
-                navigator.clipboard.writeText(modalIbanIndex.innerHTML);
-                selectQuery('.clipboardtext').style.color = '#41CE6D';
-                selectQuery('.clipboardtext').innerHTML = 'Copied! Thank you for your support!';
-            }
-        };
-    });
-
-    const { children } = $props();
+  const { children }: { children: Snippet } = $props();
 </script>
 
-<div class="navbarcontainer">
-    <Navbar/>
-</div>
+<svelte:head>
+  <title>{config.name}</title>
+  <meta name="description" content={config.description}>
+  <meta name="og:title" content={config.name}>
+  <meta name="og:description" content={config.description}>
+  <meta name="og:image" content="/assets/botavatar.png">
+  <meta name="twitter:description" content={config.description}>
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="/logo-32.png">
+</svelte:head>
 
-{@render children()}
+<Navbar/>
+<main>
+  {@render children()}
+</main>
+<Footer/>
+
+<style lang="scss">
+  @use "$lib/styles/variables";
+
+  :global(body) {
+    background-color: variables.$bg-dark;
+    color: variables.$text-primary;
+    font-family: variables.$font-primary;
+    line-height: 1.6;
+  }
+
+  :global(*) {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+
+  :global(a) {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  :global(.app) {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  :global(button) {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  main {
+    flex: 1;
+  }
+</style>

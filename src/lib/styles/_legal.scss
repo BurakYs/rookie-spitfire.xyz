@@ -1,0 +1,34 @@
+@use "$lib/styles/variables";
+@use "$lib/styles/functions" as *;
+
+.legal {
+  padding: 3rem variables.$container-padding;
+  background: variables.$bg-dark;
+  max-width: variables.$max-width;
+  margin: 6rem auto 0;
+
+  h1 {
+    font-size: variables.$font-size-3xl;
+  }
+
+  h2 {
+    font-size: variables.$font-size-2xl;
+    margin-top: 2rem;
+  }
+
+  p, li {
+    font-size: variables.$font-size-base;
+    color: variables.$text-secondary;
+    margin-bottom: 0.25rem;
+  }
+
+  ul > li {
+    margin-left: 1.25rem;
+  }
+
+  a {
+    color: variables.$text-primary;
+    text-decoration: underline;
+    text-underline-offset: toRem(4px);
+  }
+}

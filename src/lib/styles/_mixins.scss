@@ -1,0 +1,7 @@
+@use "$lib/styles/variables";
+
+@mixin container {
+  max-width: variables.$max-width;
+  margin: 0 auto;
+  padding: 0 variables.$container-padding;
+}
