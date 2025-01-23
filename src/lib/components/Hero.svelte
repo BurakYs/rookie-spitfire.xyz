@@ -115,7 +115,7 @@
       }
 
       &::after {
-        top: 50%;
+        top: 60%;
         left: 25%;
         height: toRem(350px);
       }
