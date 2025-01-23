@@ -12,7 +12,7 @@ This is a simple website template for Discord bots. It is built with Sveltekit a
 1. Run the following commands to get started:
 
     ```bash
-    git clone https://github.com/BurakYs/rookie-spitfire.xyz.git bot-website
+    git clone https://github.com/BurakYs/rookie-spitfire.xyz.git
     cd rookie-spitfire.xyz
     npm install
     ```
