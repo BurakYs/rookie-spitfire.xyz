@@ -45,7 +45,7 @@
   <div class="feature-grid">
     {#each features as feature}
       <div class="feature-card">
-        <svelte:component this={feature.icon} size={24}/>
+        <svelte:component this={feature.icon} class="icon"/>
         <div class="content">
           <h3>{feature.title}</h3>
           <p>{feature.description}</p>
@@ -59,6 +59,11 @@
   @use "$lib/styles/variables";
   @use "$lib/styles/functions" as *;
   @use "$lib/styles/mixins";
+
+  :global(.features .feature-card .icon) {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
 
   .features {
     @include mixins.container;
@@ -84,13 +89,13 @@
       gap: 1rem;
       padding: 1.5rem;
       background: variables.$bg-card;
-      border-radius: toRem(12px);
+      border-radius: 0.75rem;
       transition: all variables.$transition-speed;
-      border: 1px solid transparent;
+      border: toRem(1px) solid transparent;
 
       &:hover {
         border-color: rgba(variables.$foreground-color, 0.2);
-        transform: translateY(-2px);
+        transform: translateY(toRem(-2px));
       }
 
       .content {

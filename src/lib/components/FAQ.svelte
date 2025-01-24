@@ -45,12 +45,12 @@
         onclick={() => toggleFaq(index)}
         aria-expanded={faq.isOpen}
       >
-          <span class="question">
-            <span>{faq.question}</span>
-            <span class="icon">
-              <ChevronDown size={20}/>
-            </span>
+        <span class="question">
+          <span>{faq.question}</span>
+          <span class="icon">
+            <ChevronDown/>
           </span>
+        </span>
         <span class="answer" class:visible={faq.isOpen}>
             {@html faq.answer}
           </span>
@@ -90,8 +90,8 @@
     .faq-item {
       width: 100%;
       background: variables.$bg-card;
-      border: 1px solid transparent;
-      border-radius: toRem(8px);
+      border: toRem(1px) solid transparent;
+      border-radius: 0.5rem;
       overflow: hidden;
       transition: all variables.$transition-speed;
       text-align: left;
@@ -120,7 +120,8 @@
 
       .icon {
         transition: transform variables.$transition-speed;
-        flex-shrink: 0;
+        width: 1.25rem;
+        height: 1.25rem;
       }
     }
 

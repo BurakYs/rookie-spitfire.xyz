@@ -76,8 +76,8 @@
         margin-bottom: 1rem;
 
         img {
-          height: toRem(32px);
-          width: toRem(32px);
+          height: 2rem;
+          width: 2rem;
           border-radius: 100%;
         }
 

@@ -1,8 +1,6 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
   import config from '$lib/config';
 
-  let scrolled = $state(false);
   let sidebarOpen = $state(false);
 
   const navbarItems = [
@@ -11,30 +9,6 @@
     { name: 'FAQ', href: '#faq' },
     { name: 'Support Server', href: config.supportServer, target: '_blank' }
   ];
-
-  onMount(() => {
-    function handleScroll() {
-      scrolled = window.scrollY > 20;
-    }
-
-    function handleClickOutside(event: MouseEvent) {
-      const target = event.target as HTMLElement;
-      const sidebar = document.querySelector('.nav-links');
-      const button = document.querySelector('.sidebar-toggle');
-
-      if (sidebarOpen && sidebar && !sidebar.contains(target) && button && !button.contains(target)) {
-        sidebarOpen = false;
-      }
-    }
-
-    window.addEventListener('scroll', handleScroll);
-    document.addEventListener('click', handleClickOutside);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      document.removeEventListener('click', handleClickOutside);
-    };
-  });
 
   $effect(() => {
     document.body.style.overflow = sidebarOpen ? 'hidden' : '';
@@ -49,7 +23,7 @@
   }
 </script>
 
-<nav class="navbar" class:scrolled>
+<nav class="navbar">
   <div class="container">
     <a href="/" class="logo">
       <img src="/logo-64.png" alt="Bot Logo"/>
@@ -88,6 +62,7 @@
 <style lang="scss">
   @use "$lib/styles/variables";
   @use "$lib/styles/functions" as *;
+  @use "$lib/styles/mixins";
 
   .mobile-nav-overlay {
     position: fixed;
@@ -108,18 +83,11 @@
     background: transparent;
     backdrop-filter: blur(8px);
 
-    &.scrolled {
-      background: variables.$navbar-bg;
-      padding: 0.75rem 0;
-    }
-
     .container {
+      @include mixins.container;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0 variables.$container-padding;
-      max-width: variables.$max-width;
-      margin: 0 auto;
     }
 
     .logo {
@@ -132,6 +100,7 @@
       transition: color variables.$transition-speed;
 
       img {
+        width: 1.75rem;
         height: 1.75rem;
         border-radius: 100%;
       }
@@ -142,11 +111,10 @@
       background: none;
       border: none;
       padding: 0.5rem;
-      cursor: pointer;
 
       .hamburger {
-        width: toRem(24px);
-        height: toRem(20px);
+        width: 1.5rem;
+        height: 1.25rem;
         position: relative;
         display: flex;
         flex-direction: column;
@@ -262,14 +230,13 @@
           border: none;
           font-size: 2rem;
           color: variables.$text-primary;
-          cursor: pointer;
         }
 
         a {
           width: 100%;
           padding: 0.75rem 0;
           font-size: variables.$font-size-base;
-          border-bottom: 1px solid rgba(variables.$text-secondary, 0.1);
+          border-bottom: toRem(1px) solid rgba(variables.$text-secondary, 0.1);
 
           &:hover {
             padding-left: toRem(10px);

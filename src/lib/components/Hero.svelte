@@ -25,6 +25,8 @@
     position: relative;
     overflow: hidden;
     min-height: 80vh;
+    display: flex;
+    flex-direction: column;
 
     &::before {
       content: '';
@@ -69,7 +71,7 @@
 
       a {
         padding: 0.75rem 1.5rem;
-        border-radius: toRem(8px);
+        border-radius: 0.5rem;
         font-weight: 600;
         display: flex;
         align-items: center;
@@ -81,21 +83,21 @@
         transition: transform variables.$transition-speed ease-in-out, box-shadow variables.$transition-speed ease-in-out;
 
         img {
-          width: toRem(24px);
-          height: toRem(24px);
+          width: 1.5rem;
+          height: 1.5rem;
           margin-right: 0.5rem;
         }
 
         &:hover {
           transform: variables.$hover-transform;
-          box-shadow: 0 0 20px rgba(variables.$primary-color, 0.3);
+          box-shadow: 0 0 1.25rem rgba(variables.$primary-color, 0.3);
         }
       }
 
       .secondary-btn {
         background: rgba(variables.$primary-color, 0.1);
         color: variables.$primary-color;
-        border: 1px solid rgba(variables.$primary-color, 0.2);
+        border: toRem(1px) solid rgba(variables.$primary-color, 0.2);
         transition: transform variables.$transition-speed ease-in-out;
 
         &:hover {
@@ -132,7 +134,9 @@
 
   @media (max-width: variables.$tablet) {
     .hero {
-      padding: 18rem 1.5rem 4rem;
+      padding: 0 1.5rem;
+      justify-content: center;
+      align-items: center;
       text-align: center;
       margin: 0 auto;
 
@@ -145,9 +149,9 @@
       }
 
       p {
+        max-width: 75%;
         margin: 0 auto 2rem;
       }
-
 
       .cta-buttons {
         justify-content: center;
@@ -157,7 +161,14 @@
 
   @media (max-width: variables.$mobile) {
     .hero {
+      min-height: 100vh;
+
+      p {
+        max-width: 100%;
+      }
+
       .cta-buttons {
+        width: 100%;
         flex-direction: column;
         gap: 1rem;
 

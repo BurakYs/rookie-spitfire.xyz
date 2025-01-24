@@ -1,5 +1,4 @@
 @use "$lib/styles/variables";
-@use "$lib/styles/functions" as *;
 
 .legal {
   padding: 3rem variables.$container-padding;
@@ -29,6 +28,6 @@
   a {
     color: variables.$text-primary;
     text-decoration: underline;
-    text-underline-offset: toRem(4px);
+    text-underline-offset: 0.25rem;
   }
 }
