@@ -42,6 +42,7 @@
     outline: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
   }
 
   :global(a) {
@@ -53,10 +54,6 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-  }
-
-  :global(button) {
-    -webkit-tap-highlight-color: transparent;
   }
 
   main {
