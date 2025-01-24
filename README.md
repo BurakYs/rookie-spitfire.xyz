@@ -5,7 +5,7 @@ This is a simple website template for Discord bots. It is built with Sveltekit a
 ## 📺 Demo
 
 [Live Demo](https://rookie-spitfire.xyz)  
-![GIF Preview](https://cdn.buraky.dev/spitfire-website.gif)
+![GIF Preview](https://cdn.buraky.dev/previews/websites/rookie-spitfire.gif)
 
 ## 🚀 Getting Started
 
