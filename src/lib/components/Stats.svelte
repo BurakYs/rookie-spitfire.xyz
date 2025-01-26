@@ -54,7 +54,7 @@
         transform: translateY(-50%);
         height: toRem(50px);
         width: toRem(1px);
-        background: linear-gradient(to bottom, transparent, rgba(variables.$primary-color, 0.2), transparent);
+        background: linear-gradient(to bottom, transparent, rgba(variables.$foreground-color, 0.2), transparent);
       }
 
       .number {
