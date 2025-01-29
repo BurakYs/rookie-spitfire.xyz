@@ -18,8 +18,8 @@
       answer: `Thousands of users trust us with their accounts. You can join our <a href="${config.supportServer}" target="_blank">support server</a> and see if we are trustworthy.`
     },
     {
-      question: 'Is it free?',
-      answer: 'Yes, all core features are free to use.'
+      question: 'Is the bot free?',
+      answer: 'Yes, the bot is free, but there are premium features available.'
     },
     {
       question: 'Is my language supported?',
